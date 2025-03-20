@@ -10,7 +10,7 @@
   <body>
     <header class="header">
       <div class="flex flex-col"></div>
-      <nav>
+      <nav id="laptop_nav">
         <ul>
           <li><a href="#about">about</a></li>
           <li><a href="#projects">projects</a></li>
@@ -19,12 +19,43 @@
           <li><a href="#contact">contact</a></li>
         </ul>
       </nav>
+      <!-- hamburger -->
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
     </header>
 
     <!-- hero -->
-    <section id="hero" class="flex items-center justify-center">
-      <div></div>
-      <h1>hero</h1>
+    <section id="hero" class="flex flex-col items-center justify-center">
+      <div class="hero_container">
+        <div class="hero_img_container">
+          <img src="/public/images/hero.svg" alt="hero" />
+          <div class="radial_gradinet_purple hero_gradiet"></div>
+        </div>
+
+        <div class="">
+          <div class="text">
+            <p>
+              Hi i'm <span class="highlight">dagim chernet</span>
+              <br />
+              full stack developer whos
+            </p>
+          </div>
+
+          <h1>
+            Judges a book <br />
+            by its <span class="highlight">cover</span>...
+          </h1>
+        </div>
+      </div>
+
+      <p class="hero_description">
+        A full stack developer with 3+ years of experience. I develop web
+        applications with a focus on functionality and performance. Experienced
+        in building scalable and maintainable solutions.
+      </p>
     </section>
     <!-- projects -->
     <section id="porjects"></section>

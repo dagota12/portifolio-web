@@ -29,16 +29,23 @@
   --color-red-500: #ff3d3d;
   --color-blue-100: #98daf5;
   --color-blue-500: #4ba3f5;
+  --color-purple-300: #763cac;
+  --color-purple-400: #7127ba;
   --color-purple-800: #1a0b2e;
 }
 
 body {
   background: var(--color-primary);
   color: var(--color-gray-100);
+  position: relative;
 }
 a {
   text-decoration: none;
   color: var(--color-gray-100);
+}
+img {
+  width: 100%;
+  height: auto;
 }
 li {
   list-style: none;
@@ -64,7 +71,12 @@ li {
 .h-full {
   height: 100%;
 }
+.hidden {
+  display: none !important;
+}
 header {
+  z-index: 1000;
+  padding: 0 2rem;
   position: absolute;
   height: 70px;
   display: flex;
@@ -86,18 +98,95 @@ nav ul {
   align-items: center;
   padding: 1rem 2rem;
 }
-/* media query for nav */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 100%;
+  height: 3px;
+  background: var(--color-gray-100);
+  border-radius: 2px;
+}
+
+/* Show hamburger on smaller screens */
 @media (max-width: 768px) {
-  nav ul {
-    /* display: none; */
+  .hamburger {
+    display: flex;
   }
 }
 
+/* media query for nav */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+}
+/* highlights */
+.highlight {
+  color: var(--color-purple-400);
+}
 /* hero section */
 
 #hero {
-  overflow: hidden;
-  height: 100vh;
+  position: relative;
+  top: 70px;
+  overflow-x: hidden;
+  padding: 6rem 0 2rem;
+  min-height: 100vh;
   /* background: var(--color-blue-100); */
   color: var(--color-gray-100);
+}
+.hero_container {
+  display: flex;
+  gap: 3rem;
+
+  justify-content: center;
+  align-items: center;
+}
+.hero_container h1 {
+  font-size: 3rem;
+}
+/* gradient */
+.radial_gradinet_purple {
+  background: radial-gradient(#9628f0, inherit);
+}
+.hero_img_container {
+  display: flex;
+  position: relative;
+}
+#hero p {
+  max-width: 700px;
+  padding: 1rem;
+}
+.hero_img_container img {
+  z-index: 10;
+  position: relative;
+}
+#hero .hero_description {
+  margin-top: 5rem;
+  color: var(--color-gray-400);
+}
+
+.hero_gradiet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(var(--color-purple-300) 10%, transparent 60%);
+}
+/* media query for nav */
+@media (max-width: 768px) {
+  .hero_container {
+    flex-direction: column;
+    text-align: center;
+  }
 }
