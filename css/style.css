@@ -29,9 +29,13 @@
   --color-red-500: #ff3d3d;
   --color-blue-100: #98daf5;
   --color-blue-500: #4ba3f5;
+  --color-purple-200: #966dbd;
   --color-purple-300: #763cac;
   --color-purple-400: #7127ba;
   --color-purple-800: #1a0b2e;
+
+  --background-primary: var(--color-primary);
+  --background-secondary: var(--color-secondary);
 }
 
 body {
@@ -189,4 +193,14 @@ nav ul {
     flex-direction: column;
     text-align: center;
   }
+}
+.section_title {
+  font-size: 3rem;
+  margin: 2rem auto;
+}
+.row-reverse {
+  flex-direction: row-reverse;
+}
+.col-reverse {
+  flex-direction: column-reverse;
 }
