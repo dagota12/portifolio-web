@@ -24,6 +24,7 @@
   --color-dark: #1b1b1b;
   --color-secondary: #7a29d8;
   --color-gray-100: #ececec;
+  --color-gray-300: #cecece;
   --color-gray-400: #a3a3a3;
   --color-red-100: #f87878;
   --color-red-500: #ff3d3d;
@@ -77,6 +78,18 @@ li {
 }
 .hidden {
   display: none !important;
+}
+.text-sm {
+  font-size: 0.8rem;
+}
+.text-xs {
+  font-size: 0.7rem;
+}
+.text-lg {
+  font-size: 1.2rem;
+}
+text-3xl {
+  font-size: 3rem;
 }
 header {
   z-index: 1000;
