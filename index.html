@@ -33,7 +33,7 @@
     <section id="hero" class="flex flex-col items-center justify-center">
       <div class="hero_container">
         <div class="hero_img_container">
-          <img src="/public/images/hero.svg" alt="hero" />
+          <img src="/assets/images/hero.svg" alt="hero" />
           <div class="radial_gradinet_purple hero_gradiet"></div>
         </div>
 
@@ -85,7 +85,7 @@
         </div>
         <!-- right item -->
         <div class="project_img_container">
-          <img src="/public/images/project-1.jpg" alt="project-1" />
+          <img src="/assets/images/project-1.jpg" alt="project-1" />
         </div>
       </div>
       <div class="project_container row-reverse">
@@ -110,7 +110,7 @@
         </div>
         <!-- right item -->
         <div class="project_img_container">
-          <img src="/public/images/project-1.jpg" alt="project-1" />
+          <img src="/assets/images/project-1.jpg" alt="project-1" />
         </div>
       </div>
     </section>
@@ -137,20 +137,49 @@
     </section>
     <!-- educiation -->
     <section id="educiation">
-      <h1>Education</h1>
+      <h1 class="section_title">Education</h1>
       <div class="education_container">
-        <div class="education_item">
-          <div class="flex flex-col description">
-            <h2 class="education_type">Bsc in Computer Science</h2>
-            <p class="education_place">University Name</p>
-            <p class="education_date">2024 July - Aug</p>
+        <div class="education_timeline">
+          <div class="education_item">
+            <div class="education_marker"></div>
+            <div class="education_content">
+              <span class="education_date">2020 - 2024</span>
+              <h2 class="education_type">BSc in Computer Science</h2>
+              <p class="education_place">University Name</p>
+              <p class="education_description">
+                Gained comprehensive knowledge in software development,
+                algorithms, and computer systems. Specialized in web development
+                and data structures. Graduated with honors.
+              </p>
+              <div class="education_skills">
+                <span>Java</span>
+                <span>Data Structures</span>
+                <span>Algorithms</span>
+                <span>Web Development</span>
+              </div>
+            </div>
           </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            quod, quae, voluptates, quos quas quia quibusdam quidem voluptatum
-            doloremque quae quod, quae, voluptates, quos quas quia quibusdam
-            quidem voluptatum doloremque
-          </p>
+
+          <div class="education_item">
+            <div class="education_marker"></div>
+            <div class="education_content">
+              <span class="education_date">2019 - 2020</span>
+              <h2 class="education_type">Full Stack Web Development</h2>
+              <p class="education_place">Tech Academy</p>
+              <p class="education_description">
+                Intensive program covering modern web development technologies
+                including React, Node.js, and database management. Developed
+                multiple full-stack applications and collaborated on team
+                projects.
+              </p>
+              <div class="education_skills">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>MongoDB</span>
+                <span>REST API</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
