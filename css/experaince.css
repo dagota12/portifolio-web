@@ -74,7 +74,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/assets/images/grain_texture.svg");
+  background-image: url("assets/images/grain_texture.svg");
   opacity: 0.05;
   pointer-events: none;
   z-index: -1;
