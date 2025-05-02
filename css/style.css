@@ -12,6 +12,10 @@
   font-weight: normal;
   font-style: normal;
 } */
+
+html {
+  scroll-behavior: smooth;
+}
 *,
 *::before,
 *::after {
@@ -217,4 +221,455 @@ nav ul {
 }
 .col-reverse {
   flex-direction: column-reverse;
+}
+
+/* Contact Section - Improved Design */
+.contact_section {
+  padding: 6rem 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.contact_section .section_title {
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.contact_section .section_title:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    var(--color-purple-300),
+    var(--color-purple-400)
+  );
+  border-radius: 2px;
+}
+
+.contact_container {
+  width: 100%;
+  max-width: 650px;
+  position: relative;
+  z-index: 2;
+}
+
+.contact_container:before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(
+    circle,
+    rgba(122, 41, 216, 0.2) 0%,
+    rgba(122, 41, 216, 0) 70%
+  );
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.contact_container:after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: -40px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(
+    circle,
+    rgba(122, 41, 216, 0.15) 0%,
+    rgba(122, 41, 216, 0) 70%
+  );
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.contact_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 3rem;
+  border-radius: 1rem;
+  background: rgba(26, 11, 46, 0.6);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 0 0 1px rgba(122, 41, 216, 0.2);
+  border: 1px solid rgba(122, 41, 216, 0.2);
+}
+
+.contact_info p {
+  font-size: 1.2rem;
+  color: var(--color-gray-300);
+  line-height: 1.7;
+  max-width: 480px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.contact_info p:before {
+  content: "";
+  font-size: 4rem;
+  color: var(--color-purple-300);
+  opacity: 0.2;
+  position: absolute;
+  top: -1.5rem;
+  left: -1rem;
+}
+
+.contact_info p:after {
+  content: "
+    "";
+  font-size: 4rem;
+  color: var(--color-purple-300);
+  opacity: 0.2;
+  position: absolute;
+  bottom: -3.5rem;
+  right: -1rem;
+}
+
+.contact_button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(
+    to right,
+    var(--color-purple-300),
+    var(--color-purple-400)
+  );
+  border-radius: 0.5rem;
+  color: var(--color-gray-100);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact_button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.7s;
+}
+
+.contact_button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 6px 6px rgba(122, 41, 216, 0.2);
+}
+
+.contact_button:hover:before {
+  left: 10%;
+}
+
+/* Footer Styles */
+#footer {
+  background-color: var(--color-purple-800);
+  padding: 3rem 2rem 1.5rem;
+  margin-top: 4rem;
+  border-top: 1px solid rgba(122, 41, 216, 0.3);
+}
+
+.footer_container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer_top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(122, 41, 216, 0.2);
+}
+
+.footer_logo h2 {
+  font-size: 1.8rem;
+  color: var(--color-gray-100);
+  margin-bottom: 0.5rem;
+}
+
+.footer_logo p {
+  color: var(--color-purple-200);
+  font-size: 1rem;
+}
+
+.footer_links {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.footer_nav h3,
+.footer_social h3 {
+  color: var(--color-gray-100);
+  margin-bottom: 1.2rem;
+  font-size: 1.2rem;
+}
+
+.footer_nav ul,
+.footer_social ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer_nav ul li a,
+.footer_social ul li a {
+  color: var(--color-gray-400);
+  transition: color 0.3s;
+  font-size: 0.9rem;
+}
+
+.footer_nav ul li a:hover,
+.footer_social ul li a:hover {
+  color: var(--color-purple-300);
+}
+
+.footer_bottom {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.footer_bottom p {
+  color: var(--color-gray-400);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .footer_top {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer_links {
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 100%;
+    align-items: center;
+  }
+
+  .footer_logo {
+    text-align: center;
+  }
+
+  .footer_nav,
+  .footer_social {
+    width: 100%;
+  }
+
+  .footer_nav ul,
+  .footer_social ul {
+    align-items: center;
+  }
+
+  .footer_nav ul li a,
+  .footer_social ul li a {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    width: auto;
+    min-width: 120px;
+  }
+
+  .footer_nav ul li,
+  .footer_social ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Add a subtle divider between navigation items on mobile */
+  .footer_nav ul li:not(:last-child),
+  .footer_social ul li:not(:last-child) {
+    border-bottom: 1px solid rgba(122, 41, 216, 0.1);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Contact section mobile adjustments */
+  .contact_info {
+    padding: 2rem;
+  }
+
+  .contact_info p {
+    font-size: 1.1rem;
+  }
+
+  .contact_info p:before,
+  .contact_info p:after {
+    font-size: 3rem;
+  }
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  nav ul.mobile-nav-active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-purple-800);
+    padding: 1.5rem 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: slideDown 0.3s ease-in-out;
+    z-index: 100;
+  }
+
+  nav ul.mobile-nav-active li {
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  /* Footer mobile adjustments */
+  .footer_top {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer_links {
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 100%;
+    align-items: center;
+  }
+
+  .footer_logo {
+    text-align: center;
+  }
+
+  .footer_nav,
+  .footer_social {
+    width: 100%;
+  }
+
+  .footer_nav ul,
+  .footer_social ul {
+    align-items: center;
+  }
+
+  .footer_nav ul li a,
+  .footer_social ul li a {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    width: auto;
+    min-width: 120px;
+  }
+
+  .footer_nav ul li,
+  .footer_social ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Add a subtle divider between navigation items on mobile */
+  .footer_nav ul li:not(:last-child),
+  .footer_social ul li:not(:last-child) {
+    border-bottom: 1px solid rgba(122, 41, 216, 0.1);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Contact section mobile adjustments */
+  .contact_info {
+    padding: 2rem;
+  }
+
+  .contact_info p {
+    font-size: 1.1rem;
+  }
+
+  .contact_info p:before,
+  .contact_info p:after {
+    font-size: 3rem;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer and Contact Animations */
+#footer {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+#footer.footer-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact_section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.contact_section.contact-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Social icon hover effects */
+.footer_social ul li a {
+  position: relative;
+  padding-left: 1.5rem;
+  transition: color 0.3s;
+}
+
+.footer_social ul li a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.footer_social ul li a:hover:before {
+  opacity: 1;
 }
